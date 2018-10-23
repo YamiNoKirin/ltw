@@ -11,24 +11,34 @@
   <h1>Things™ Management</h1>
   <ul>
     <li>Home</li>
-    <li>Categories</li>
+    <li>Categories
+      <ul>
+        <li>Category 1</li>
+        <li>Category 2</li>
+        <li>Category 3</li>
+      </ul>
+    </li>
     <li>Settings</li>
     <li>Account</li>
     <li>Logout</li>
   </ul>
   <table id="app">
-    <tr>
-      <th>Name</th>
-      <th>Prop 1</th>
-      <th>Prop 2</th>
-      <th>Ops</th>
-    </tr>
-    <tr v-for="el in col">
-      <td>{{el.name}}</td>
-      <td>{{el.prop1}}</td>
-      <td>{{el.prop2}}</td>
-      <td>Edit Delete</td>
-    </tr>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Prop 1</th>
+        <th>Prop 2</th>
+        <th>Ops</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="el in col">
+        <td>{{el.name}}</td>
+        <td>{{el.prop1}}</td>
+        <td>{{el.prop2}}</td>
+        <td>Edit Delete</td>
+      </tr>
+    </tbody>
   </table>
 </body>
 </html>
