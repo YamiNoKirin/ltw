@@ -11,20 +11,20 @@ table {
 }
 
 thead tr {
-  background-color: #594157;
-  color: #BEE7E8;
+  background-color: #231F20;
+  color: #BB4430;
 }
 
 tbody > tr:nth-child(odd) {
-  background-color: #BEE7E8;
-  color: #594157;
+  background-color: #F3DFA2;
+  color: #BB4430;
 }
 
 tbody > tr:nth-child(even) {
-  background-color: #84DCC6;
-  color: #594157;
+  background-color: #EFE6DD;
+  color: #BB4430;
 }
 
 tbody > tr:hover {
-  background-color: #A0D2DB;
+  background-color: #7EBDC2;
 }
