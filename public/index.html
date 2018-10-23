@@ -1,11 +1,21 @@
 <html>
 <head>
   <title>Admin UI</title>
+    <meta charset="utf-8" />
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="main.css"></link>
 </head>
 
 <body>
-  <h1>Chestii Management</h1>
+  <h1>Things™ Management</h1>
+  <ul>
+    <li>Home</li>
+    <li>Categories</li>
+    <li>Settings</li>
+    <li>Account</li>
+    <li>Logout</li>
+  </ul>
   <table id="app">
     <tr>
       <th>Name</th>
@@ -20,18 +30,5 @@
       <td>Edit Delete</td>
     </tr>
   </table>
-
-  <script>
-  var app = new Vue( {
-    el: '#app',
-    data: {
-      col: [
-        { name: "Sandel" ,  prop1: "Violet" , prop2: 29 },
-        { name: "Georgel" , prop1: "Magenta" , prop2: 24 },
-        { name: "Ionel" ,   prop1: "Mov" , prop2: 25 }
-      ]
-    }
-  } );
-  </script>
 </body>
 </html>
