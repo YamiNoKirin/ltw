@@ -8,37 +8,51 @@
 </head>
 
 <body>
-  <h1>Things™ Management</h1>
-  <ul>
-    <li>Home</li>
-    <li>Categories
-      <ul>
-        <li>Category 1</li>
-        <li>Category 2</li>
-        <li>Category 3</li>
+  <div id="app">
+    <div id="header">
+      <h1>Things™ Management</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">Settings</a>
+        <a href="#">Account</a>
+        <a href="#">Logout</a>
+      </nav>
+    </div>
+    <div id="sidebar">
+      <ul class="sidemenu">
+        <li>Home</li>
+        <li><label for="F4210DB2-006F-47C9-874E-3A8B5DE715ED">Categories</label><input type="checkbox" id="F4210DB2-006F-47C9-874E-3A8B5DE715ED" /><ul>
+          <li>Category 1</li>
+          <li>Category 2</li>
+          <li>Category 3</li>
+          <li>Category 4</li>
+        </ul></li>
+        <li>Settings</li>
+        <li>Account</li>
+        <li>Logout</li>
       </ul>
-    </li>
-    <li>Settings</li>
-    <li>Account</li>
-    <li>Logout</li>
-  </ul>
-  <table id="app">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Prop 1</th>
-        <th>Prop 2</th>
-        <th>Ops</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="el in col">
-        <td>{{el.name}}</td>
-        <td>{{el.prop1}}</td>
-        <td>{{el.prop2}}</td>
-        <td>Edit Delete</td>
-      </tr>
-    </tbody>
-  </table>
+    </div>
+    <div id="content">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Prop 1</th>
+            <th>Prop 2</th>
+            <th>Ops</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="el in col">
+            <td>{{el.name}}</td>
+            <td>{{el.prop1}}</td>
+            <td>{{el.prop2}}</td>
+            <td>Edit Delete</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>
