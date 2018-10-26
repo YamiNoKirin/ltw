@@ -34,45 +34,50 @@ body {
   padding: 10px;
 }
 
-nav {
+nav.mainmenu {
   display: grid;
   grid-template-columns: repeat(4 , 100px) auto;
   grid-template-rows: auto;
 }
 
-nav a, .nav a:link {
+nav.mainmenu a {
   text-decoration: none;
   color: #BB4430;
   padding: 10px 10px;
   justify-self: center;
 }
 
-nav a:last-child {
+nav.mainmenu a:last-child {
   justify-self: right;
 }
 
-nav a:hover {
+nav.mainmenu a:hover {
   background-color: #F3DFA2;
 }
 
-nav .submenu {
+nav.mainmenu .submenu {
   position: absolute;
   display: none;
 }
 
-nav a:hover .submenu {
+nav.mainmenu a:hover .submenu {
   display: block;
 }
 
-.sidemenu li > ul {
+ul.sidemenu {
+  color: #231F20;
+  list-style: none;
+}
+
+ul.sidemenu li > ul {
   display: none;
 }
 
-.sidemenu input:checked + ul {
+ul.sidemenu li>input:checked + ul {
   display: block;
 }
 
-.sidemenu li>input[type="checkbox"] {
+ul.sidemenu li>input[type="checkbox"] {
   display: none;
 }
 
