@@ -3,6 +3,7 @@
   <title>Admin UI</title>
     <meta charset="utf-8" />
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="main.js"></script>
   <link rel="stylesheet" href="main.css"></link>
 </head>
@@ -37,17 +38,17 @@
       <table>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Prop 1</th>
-            <th>Prop 2</th>
+            <th>Date</th>
+            <th>EUR</th>
+            <th>USD</th>
             <th>Ops</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="el in col">
-            <td>{{el.name}}</td>
-            <td>{{el.prop1}}</td>
-            <td>{{el.prop2}}</td>
+          <tr v-for="(el, date) in currency">
+            <td>{{date}}</td>
+            <td class="number">{{el.EUR | number}}</td>
+            <td class="number">{{el.USD | number}}</td>
             <td>Edit Delete</td>
           </tr>
         </tbody>

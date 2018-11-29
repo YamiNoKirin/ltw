@@ -107,3 +107,7 @@ tbody > tr:nth-child(even) {
 tbody > tr:hover {
   background-color: #7EBDC2;
 }
+
+.number {
+  text-align: right;
+}
