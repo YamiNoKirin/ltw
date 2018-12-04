@@ -68,7 +68,7 @@ app.delete( '/api/:type/:id' , (_req , _res) => {
   const id = _req.params.id.toLowerCase();
   const type = _req.params.type.toLowerCase();
   if ( (type in database) && (id in database[type]) ) {
-    unset( database[type][ip] );
+    delete database[type][id];
     _res.json( {
       ret: 'OK',
       data: '${type}/${id}'
