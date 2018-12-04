@@ -71,7 +71,7 @@ app.delete( '/api/:type/:id' , (_req , _res) => {
     delete database[type][id];
     _res.json( {
       ret: 'OK',
-      data: '${type}/${id}'
+      data: `${type}/${id}`
     } );
     dbsync.save( database );
   } else {
