@@ -45,14 +45,18 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(el, date) in currency">
-            <td>{{date}}</td>
+          <tr v-for="(el, id) in currency">
+            <td>{{el.Date}}</td>
             <td class="number">{{el.EUR | number}}</td>
             <td class="number">{{el.USD | number}}</td>
-            <td>Edit Delete</td>
+            <td><button v-on:click="edit(id)">Edit</button> <button v-on:click="remove(id)">Delete</button></td>
           </tr>
         </tbody>
       </table>
+      <label>Date: <input v-model="input.Date" /></label><br />
+      <label>EUR: <input v-model="input.EUR" /></label><br />
+      <label>USD: <input v-model="input.USD" /></label><br />
+      <button v-on:click="commit">{{(editId === null)?"Add":"Edit"}}</button>
     </div>
   </div>
 </body>
