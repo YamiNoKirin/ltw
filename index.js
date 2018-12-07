@@ -58,7 +58,7 @@ app.post( '/api/:type' , (_req , _res ) => {
     console.log( `[OK][POST] ${type}` );
     _res.json( {
       ret: 'OK',
-      id
+      data: `${type}/${id}`
     } );
     dbsync.save( database );
   } else {
@@ -98,7 +98,7 @@ app.put( '/api/:type/:id' , (_req , _res) => {
     console.log( `[OK][PUT] ${type}/${id}` );
     _res.json( {
       ret: 'OK',
-      data: '${type}/${id}'
+      data: `${type}/${id}`
     } );
     dbsync.save( database );
   } else {
